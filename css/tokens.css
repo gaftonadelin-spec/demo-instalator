@@ -1,51 +1,221 @@
 /* =========================================================================
-   TOKENS — culori, tipografie, spațiere, raze, mișcare.
-   Paleta de bază:
-     Bleumarin industrial  #0B192C   (ink / fundal închis)
-     Hârtie                #F8FAFC   (fundal deschis)
-     Portocaliu urgență    #F97316   (apeluri, acțiuni principale)
-     Oțel                  #52627A   (text secundar pe deschis)
-     Țeavă (albastru rece) #D5E0EC   (linii, suprafețe secundare)
-   Textul pe portocaliu este bleumarin (contrast ≈ 6.9:1), nu alb.
-   ========================================================================= */
-:root {
-  /* brand */
-  --navy-950: #071120;
-  --navy-900: #0B192C;
-  --navy-800: #11243C;
-  --navy-700: #1A3350;
-  --navy-600: #2A4566;
-  --orange-500: #F97316;
-  --orange-400: #FB8A3C;
-  --orange-600: #EA640C;
-  --wa-green: #25D366;
-  --wa-green-600: #1EBE5A;
+   TOKENS — sistem în trei straturi (primitive → semantice → componente).
 
-  /* temă luminoasă (implicită) */
-  --c-bg: #F8FAFC;
-  --c-bg-alt: #EEF3F8;
-  --c-surface: #FFFFFF;
-  --c-surface-2: #F3F6FA;
-  --c-text: #0B192C;
-  --c-text-2: #3F4F66;
-  --c-text-3: #5A6A80;
-  --c-line: #D5E0EC;
-  --c-line-strong: #B9C8D9;
-  --c-accent: var(--orange-500);
-  --c-accent-hover: var(--orange-400);
-  --c-on-accent: #0B192C;
-  --c-accent-text: #C2410C;   /* portocaliu pentru text pe fundal deschis (AA) */
-  --c-dark: var(--navy-900);
-  --c-on-dark: #F1F5FA;
-  --c-on-dark-2: #AEBCCE;
-  --c-focus: #F97316;
-  --c-success: #15803D;
-  --c-error: #B91C1C;
-  --c-error-bg: #FEF2F2;
-  --c-paper: #FFFFFF;
-  --c-paper-line: #CBD6E3;
-  --shadow-1: 0 1px 2px rgba(11, 25, 44, .06), 0 4px 14px rgba(11, 25, 44, .06);
-  --shadow-2: 0 2px 4px rgba(11, 25, 44, .06), 0 18px 40px -12px rgba(11, 25, 44, .22);
+   Atmosferă: brand european de instalații și confort termic.
+   Piatră caldă, antracit verde-pădure, cupru mat, verde-petrol.
+
+   Regula: componentele folosesc DOAR tokenuri semantice/de componentă.
+   Primitivele (--p-*) se referă doar aici.
+   ========================================================================= */
+
+/* ---------- 1. PRIMITIVE ---------- */
+:root {
+  /* piatră / nisip (fundaluri calde) */
+  --p-stone-50: #FCFBF9;
+  --p-stone-100: #F7F4EF;
+  --p-stone-150: #F3EFE8;
+  --p-stone-200: #EDE8DF;
+  --p-stone-300: #DDD6C9;
+  --p-stone-400: #C9BFAE;
+  --p-stone-500: #BDB8AD;
+  --p-stone-600: #66605A;
+  --p-stone-700: #57534E;
+  --p-stone-900: #1C1917;
+  --p-ivory: #F3EEE6;
+
+  /* antracit verde-pădure */
+  --p-forest-950: #121816;
+  --p-forest-900: #1C2522;
+  --p-forest-800: #232E2A;
+  --p-forest-700: #2C3934;
+
+  /* cupru */
+  --p-copper-300: #E08A5F;
+  --p-copper-400: #E07A52;
+  --p-copper-450: #D96B43;
+  --p-copper-500: #B85028;
+  --p-copper-600: #A3461F;
+  --p-copper-700: #963E1C;
+  --p-copper-100: #F4E1D6;
+
+  /* verde-petrol (apă adâncă) */
+  --p-petrol-200: #7FC8BE;
+  --p-petrol-300: #4FD1C5;
+  --p-petrol-600: #2A6F68;
+  --p-petrol-700: #215A54;
+  --p-petrol-100: #DCEBE7;
+
+  /* cărbune cald (dark) */
+  --p-carbon-950: #0F110F;
+  --p-carbon-900: #141514;
+  --p-carbon-850: #181A18;
+  --p-carbon-800: #1E201E;
+  --p-carbon-750: #252825;
+  --p-carbon-700: #2E312E;
+  --p-carbon-600: #3E423E;
+  --p-chalk: #EDE9E3;
+  --p-chalk-2: #B5AFA6;
+  --p-chalk-3: #A39D94;
+
+  --p-gold: #9A6A0C;
+  --p-gold-light: #E0B04A;
+  --p-red-700: #A52A1C;
+  --p-red-300: #F4A595;
+}
+
+/* ---------- 2. SEMANTICE — temă luminoasă (implicită) ---------- */
+:root {
+  --c-bg: var(--p-stone-100);
+  --c-bg-alt: var(--p-stone-200);
+  --c-surface: var(--p-stone-50);
+  --c-surface-2: var(--p-stone-150);
+  --c-line: var(--p-stone-300);
+  --c-line-strong: var(--p-stone-400);
+
+  --c-text: var(--p-stone-900);
+  --c-text-2: var(--p-stone-700);
+  --c-text-3: var(--p-stone-600);
+  --c-primary: var(--p-forest-900);
+
+  --c-secondary: var(--p-petrol-600);
+  --c-secondary-hover: var(--p-petrol-700);
+  --c-on-secondary: #FFFFFF;                 /* 5.9:1 */
+  --c-secondary-soft: var(--p-petrol-100);
+  --c-secondary-text: var(--p-petrol-600);   /* 4.8:1 pe nisip */
+
+  --c-accent: var(--p-copper-500);
+  --c-accent-hover: var(--p-copper-700);
+  --c-on-accent: #FFFFFF;                    /* 5.0:1 */
+  --c-accent-text: var(--p-copper-600);      /* 5.0:1 și pe #EDE8DF */
+  --c-accent-soft: var(--p-copper-100);
+  --c-accent-soft-text: var(--p-copper-700);
+
+  --c-focus: var(--p-petrol-600);
+  --c-success: var(--p-petrol-600);
+  --c-error: var(--p-red-700);
+  --c-error-bg: #F8E4DE;
+  --c-star: var(--p-gold);
+
+  --c-paper: var(--p-stone-50);
+  --c-paper-line: var(--p-stone-300);
+
+  /* zone antracit (hero, proces, footer, urgență) — aceleași în ambele teme ca rol */
+  --c-deep: var(--p-forest-900);
+  --c-deep-2: var(--p-forest-800);
+  --c-deep-3: var(--p-forest-950);
+  --c-deep-rgb: 28, 37, 34;
+  --c-on-deep: var(--p-ivory);               /* 13.6:1 */
+  --c-on-deep-2: var(--p-stone-500);         /* 7.9:1 */
+  --c-on-deep-line: rgba(243, 238, 230, .12);
+  --c-accent-on-deep: var(--p-copper-300);   /* 6.0:1 */
+  --c-secondary-on-deep: var(--p-petrol-200);
+  --c-live: var(--p-petrol-200);
+
+  --c-tone-1: var(--p-forest-900);
+  --c-tone-2: var(--p-petrol-600);
+  --c-tone-3: var(--p-copper-700);
+  --c-tone-4: var(--p-stone-700);
+
+  /* umbre calde, naturale */
+  --shadow-1: 0 1px 2px rgba(28, 25, 23, .06), 0 4px 12px -4px rgba(28, 25, 23, .06);
+  --shadow-2: 0 1px 2px rgba(28, 25, 23, .06), 0 12px 28px -10px rgba(28, 25, 23, .12), 0 32px 60px -30px rgba(28, 25, 23, .16);
+  --shadow-hover: 0 2px 4px rgba(28, 25, 23, .06), 0 18px 36px -14px rgba(28, 25, 23, .18);
+  --card-top: 0 0 0 0 transparent;
+
+  /* texturi: grilă arhitecturală foarte fină (ivoriu, ~3%) + lumină caldă */
+  --blueprint:
+    linear-gradient(rgba(243, 238, 230, .03) 1px, transparent 1px) 0 0 / 40px 40px,
+    linear-gradient(90deg, rgba(243, 238, 230, .03) 1px, transparent 1px) 0 0 / 40px 40px;
+  --deep-glow: radial-gradient(1000px 560px at 100% 0%, rgba(184, 80, 40, .10), transparent 60%);
+
+  color-scheme: light;
+}
+
+/* ---------- 2b. SEMANTICE — temă întunecată: cărbune cald & cupru periat ---------- */
+:root[data-theme="dark"] {
+  --c-bg: var(--p-carbon-900);
+  --c-bg-alt: var(--p-carbon-850);
+  --c-surface: var(--p-carbon-800);
+  --c-surface-2: var(--p-carbon-750);
+  --c-line: var(--p-carbon-700);
+  --c-line-strong: var(--p-carbon-600);
+
+  --c-text: var(--p-chalk);
+  --c-text-2: var(--p-chalk-2);
+  --c-text-3: var(--p-chalk-3);
+  --c-primary: var(--p-chalk);
+
+  --c-secondary: var(--p-petrol-300);
+  --c-secondary-hover: #7DE0D6;
+  --c-on-secondary: var(--p-carbon-900);     /* 9.8:1 */
+  --c-secondary-soft: rgba(79, 209, 197, .12);
+  --c-secondary-text: var(--p-petrol-300);
+
+  --c-accent: var(--p-copper-450);
+  --c-accent-hover: var(--p-copper-400);
+  --c-on-accent: var(--p-carbon-900);        /* 5.4:1 — albul ar avea 3.4:1 */
+  --c-accent-text: var(--p-copper-400);      /* 5.5:1 pe carduri */
+  --c-accent-soft: rgba(217, 107, 67, .14);
+  --c-accent-soft-text: var(--p-copper-300);
+
+  --c-focus: var(--p-petrol-300);
+  --c-success: var(--p-petrol-300);
+  --c-error: var(--p-red-300);
+  --c-error-bg: rgba(165, 42, 28, .18);
+  --c-star: var(--p-gold-light);
+
+  --c-paper: var(--p-carbon-800);
+  --c-paper-line: var(--p-carbon-700);
+
+  --c-deep: var(--p-carbon-950);
+  --c-deep-2: var(--p-carbon-800);
+  --c-deep-3: #0A0B0A;
+  --c-deep-rgb: 15, 17, 15;
+  --c-on-deep: var(--p-chalk);
+  --c-on-deep-2: var(--p-chalk-2);
+  --c-on-deep-line: rgba(237, 233, 227, .10);
+  --c-accent-on-deep: var(--p-copper-400);
+  --c-secondary-on-deep: var(--p-petrol-300);
+  --c-live: var(--p-petrol-300);
+
+  --c-tone-1: var(--p-forest-700);
+  --c-tone-2: var(--p-petrol-600);
+  --c-tone-3: var(--p-copper-700);
+  --c-tone-4: var(--p-stone-700);
+
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, .35), 0 6px 16px -8px rgba(0, 0, 0, .45);
+  --shadow-2: 0 1px 2px rgba(0, 0, 0, .35), 0 18px 40px -14px rgba(0, 0, 0, .55);
+  --shadow-hover: 0 2px 4px rgba(0, 0, 0, .35), 0 22px 44px -16px rgba(0, 0, 0, .65);
+  --card-top: inset 0 1px 0 0 rgba(217, 107, 67, .38);   /* cupru periat, sus */
+
+  --deep-glow: radial-gradient(1000px 560px at 100% 0%, rgba(217, 107, 67, .07), transparent 60%);
+
+  color-scheme: dark;
+}
+
+/* ---------- 3. COMPONENTE + scări ---------- */
+:root {
+  /* raze: arhitecturale, nu „bule” */
+  --r-sm: 4px;
+  --r-md: 6px;
+  --r-lg: 8px;
+  --r-xl: 10px;
+  --r-control: 6px;        /* butoane, chip-uri, câmpuri */
+  --r-round: 999px;        /* doar elemente circulare intenționate */
+
+  --btn-h: 48px;
+  --btn-h-lg: 56px;
+  --btn-pad-x: 1.4rem;
+  --btn-weight: 600;
+
+  --card-bg: var(--c-surface);
+  --card-border: var(--c-line);
+  --card-radius: var(--r-lg);
+  --card-shadow: var(--card-top), var(--shadow-1);
+  --card-shadow-hover: var(--card-top), var(--shadow-hover);
+
+  --input-bg: var(--c-surface);
+  --input-border: var(--c-line-strong);
 
   /* tipografie */
   --font-display: "Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
@@ -63,16 +233,9 @@
   /* spațiere 4/8 */
   --sp-1: .25rem; --sp-2: .5rem; --sp-3: .75rem; --sp-4: 1rem;
   --sp-5: 1.5rem; --sp-6: 2rem; --sp-7: 3rem; --sp-8: 4rem; --sp-9: 6rem;
-  --section-y: clamp(4rem, 3rem + 4vw, 7rem);
+  --section-y: clamp(4.5rem, 3rem + 5vw, 8rem);
   --gutter: clamp(1rem, .6rem + 2vw, 2rem);
   --container: 1240px;
-
-  /* raze: ierarhie, nu o singură valoare */
-  --r-sm: 8px;
-  --r-md: 14px;
-  --r-lg: 22px;
-  --r-xl: 32px;
-  --r-pill: 999px;
 
   /* mișcare */
   --ease-out: cubic-bezier(.2, .8, .2, 1);
@@ -89,33 +252,6 @@
 
   --header-h: 72px;
   --bar-h: 0px;
-
-  color-scheme: light;
-}
-
-/* temă întunecată */
-:root[data-theme="dark"] {
-  --c-bg: #0B192C;
-  --c-bg-alt: #0E1F36;
-  --c-surface: #11243C;
-  --c-surface-2: #16304E;
-  --c-text: #EEF3F9;
-  --c-text-2: #C3CFDD;
-  --c-text-3: #9AABC0;
-  --c-line: #22395A;
-  --c-line-strong: #2F4B70;
-  --c-accent-text: #FB923C;
-  --c-dark: #071120;
-  --c-on-dark: #F1F5FA;
-  --c-on-dark-2: #A9B8CB;
-  --c-success: #4ADE80;
-  --c-error: #FCA5A5;
-  --c-error-bg: rgba(185, 28, 28, .16);
-  --c-paper: #10223A;
-  --c-paper-line: #2A4466;
-  --shadow-1: 0 1px 2px rgba(0, 0, 0, .3);
-  --shadow-2: 0 18px 40px -12px rgba(0, 0, 0, .55);
-  color-scheme: dark;
 }
 
 @media (max-width: 767.98px) {

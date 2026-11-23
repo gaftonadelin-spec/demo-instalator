@@ -86,7 +86,7 @@ a, button, label, input[type="radio"], input[type="checkbox"] { touch-action: ma
   white-space: nowrap;
 }
 
-::selection { background: var(--orange-500); color: var(--navy-900); }
+::selection { background: var(--c-accent); color: var(--c-on-accent); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
