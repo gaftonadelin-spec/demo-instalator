@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AquaFix Instalații – Instalator Sanitar și Termic 24/7 în Timișoara</title>
+  <meta name="description" content="Instalator sanitar și termic non-stop în Timișoara. Țevi sparte, centrale termice, desfundare canalizare, instalații băi. Ajungem în 60 de minute, cu deviz clar și garanție scrisă.">
+  <meta name="theme-color" content="#0B192C">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AquaFix Instalații – Intervenții Rapide 24/7">
+  <meta property="og:description" content="Instalator sanitar și termic non-stop. Ajungem în 60 de minute.">
+  <meta property="og:image" content="./assets/img/og.svg">
+
+  <!-- Temă: aplicată înainte de randare, ca să nu clipească pagina -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("aquafix-theme");
+        var dark = saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+      } catch (e) { document.documentElement.setAttribute("data-theme", "light"); }
+      document.documentElement.classList.add("js");
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,500..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/tokens.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/sections.css">
+
+  <script src="./js/config.js" defer></script>
+  <script src="./js/data.js" defer></script>
+  <script src="./js/app.js" defer></script>
+</head>
+<body>
+
+<!-- ICONS: sprite SVG reutilizabil (stil Lucide, contur 1.75) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.59-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.69.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.48-8.41z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1z"/><path d="M8 8h8M8 12h8M8 16h5"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/><path d="M12 11v4M12 18h.01"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol>
+    <symbol id="i-drain" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+    <symbol id="i-bath" viewBox="0 0 24 24"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.68 3 4 3.68 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/><path d="M10 5 8 7M2 12h20M7 19v2M17 19v2"/></symbol>
+    <symbol id="i-tap" viewBox="0 0 24 24"><path d="M3 10h9a4 4 0 0 1 4 4v1"/><path d="M7 10V6h7M10.5 6V3M8 3h5"/><path d="M16 18.5c0 .83-.67 1.5-1.5 1.5S13 19.33 13 18.5c0-1 1.5-2.5 1.5-2.5s1.5 1.5 1.5 2.5z"/><path d="M3 21h18"/></symbol>
+    <symbol id="i-floor" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-google" viewBox="0 0 24 24"><path fill="#4285F4" stroke="none" d="M23.49 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.47a5.57 5.57 0 0 1-2.4 3.58v3h3.86c2.26-2.09 3.56-5.17 3.56-8.82z"/><path fill="#34A853" stroke="none" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96H1.29v3.09A12 12 0 0 0 12 24z"/><path fill="#FBBC05" stroke="none" d="M5.27 14.29A7.2 7.2 0 0 1 4.89 12c0-.8.14-1.57.38-2.29V6.62H1.29A12 12 0 0 0 0 12c0 1.94.47 3.76 1.29 5.38l3.98-3.09z"/><path fill="#EA4335" stroke="none" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42A11.5 11.5 0 0 0 12 0 12 12 0 0 0 1.29 6.62l3.98 3.09C6.22 6.86 8.87 4.75 12 4.75z"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#main">Sari la conținut</a>
+
+<!-- SECTION: HEADER -->
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a class="brand" href="#top" aria-label="AquaFix Instalații, înapoi sus">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+        <rect width="40" height="40" rx="11" fill="var(--c-accent)"/>
+        <path d="M11 13h9a6 6 0 0 1 6 6v3" fill="none" stroke="#0B192C" stroke-width="4" stroke-linecap="round"/>
+        <path d="M26 26.5c0 2-1.5 3.5-3.2 3.5s-3.3-1.5-3.3-3.5c0-2.2 3.3-5.5 3.3-5.5s3.2 3.3 3.2 5.5z" fill="#0B192C" transform="translate(3.2 -1)"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name" data-cfg="company.shortName">AquaFix</span>
+        <span class="brand-sub">Instalații</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navigare principală">
+      <ul>
+        <li><a href="#servicii">Servicii</a></li>
+        <li><a href="#tarife">Tarife</a></li>
+        <li><a href="#cum-lucram">Cum lucrăm</a></li>
+        <li><a href="#recenzii">Recenzii</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-drawer-cta">
+        <a class="btn btn-accent btn-block" data-href="tel"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span data-cfg="contact.phoneDisplay">0722 000 000</span></a>
+        <a class="btn btn-whatsapp btn-block" data-href="whatsapp" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>Scrie pe WhatsApp</a>
+      </div>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" type="button" aria-label="Activează tema întunecată" aria-pressed="false">
+        <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+      </button>
+      <a class="btn btn-accent header-call" data-href="tel" aria-label="Sună acum">
+        <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+        <span class="header-call-text" data-cfg="contact.phoneDisplay">0722 000 000</span>
+      </a>
+      <button class="icon-btn nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Deschide meniul">
+        <svg class="icon icon-open" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="icon icon-close" aria-hidden="true"><use href="#i-x"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- SECTION: HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-card">
+      <img class="hero-img"
+           src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1800&q=72&auto=format&fit=crop"
+           srcset="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&q=70&auto=format&fit=crop 800w,
+                   https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1400&q=72&auto=format&fit=crop 1400w,
+                   https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=2000&q=72&auto=format&fit=crop 2000w"
+           sizes="100vw"
+           data-fallback="./assets/img/hero.svg"
+           onerror="this.onerror=null;this.removeAttribute('srcset');this.src=this.dataset.fallback"
+           alt="" width="1800" height="1200" fetchpriority="high">
+      <div class="hero-shade" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <p class="status-chip">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>Dispecerat deschis acum<span class="live-time" aria-hidden="true"></span></span>
+        </p>
+
+        <h1 id="hero-title" class="hero-title">Instalator Sanitar și Termic 24/7&nbsp;– Ajungem în 60&nbsp;de&nbsp;minute</h1>
+
+        <p class="hero-lead">Venim în tot <span data-cfg="company.city">Timișoara</span> cu duba echipată și piesele la noi. Îți spunem prețul înainte să începem și îți lăsăm garanție scrisă pentru fiecare lucrare.</p>
+
+        <div class="hero-ctas">
+          <a class="btn btn-accent btn-lg" data-href="tel">
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Sună Acum
+          </a>
+          <a class="btn btn-ghost-light btn-lg" data-href="whatsapp" data-wa-text="Bună ziua! Aș dori o ofertă pentru o lucrare de instalații." target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>Cere Ofertă pe WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <ul class="trust-row" aria-label="De ce AquaFix">
+        <li>
+          <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
+          <span><strong>Intervenție rapidă</strong><span class="trust-sub">Sub 60 de minute în oraș</span></span>
+        </li>
+        <li>
+          <svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>
+          <span><strong>Garanție scrisă</strong><span class="trust-sub">Până la 24 de luni pe manoperă</span></span>
+        </li>
+        <li>
+          <svg class="icon" aria-hidden="true"><use href="#i-receipt"/></svg>
+          <span><strong>Fără costuri ascunse</strong><span class="trust-sub">Deviz semnat înainte de lucru</span></span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SECTION: SERVICES (randat din SITE_DATA.services) -->
+  <section class="section services" id="servicii" aria-labelledby="services-title">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="services-title" class="section-title">Ce reparăm și ce montăm</h2>
+        <p class="section-lead">De la o garnitură care picură până la instalația completă a unei case. Toți instalatorii noștri sunt autorizați ANRE și lucrează cu facturi și piese cu certificat.</p>
+      </div>
+      <div class="services-grid" data-render="services"></div>
+    </div>
+  </section>
+
+  <!-- SECTION: PRICING (randat din SITE_DATA.pricing) -->
+  <section class="section pricing" id="tarife" aria-labelledby="pricing-title">
+    <div class="container pricing-layout">
+      <div class="pricing-intro">
+        <h2 id="pricing-title" class="section-title">Tarife orientative, spuse dinainte</h2>
+        <p class="section-lead">Prețurile sunt pentru manoperă și pornesc de la valorile de mai jos. Prețul final îl afli după constatarea la fața locului, pe un deviz pe care îl semnezi înainte să începem.</p>
+        <ul class="pricing-facts">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Constatarea de 100 RON se scade din lucrare</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Materialele le cumperi tu sau le aducem noi, la preț de factură</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Plătești cash, cu cardul sau prin transfer</li>
+        </ul>
+      </div>
+
+      <article class="quote-sheet" aria-labelledby="quote-title">
+        <header class="quote-head">
+          <div>
+            <h3 id="quote-title">Deviz orientativ</h3>
+            <p>Prețuri în lei, manoperă, TVA inclus</p>
+          </div>
+          <span class="quote-stamp" aria-hidden="true"><span data-cfg="company.shortName">AquaFix</span><br>2026</span>
+        </header>
+        <div class="quote-body" data-render="pricing"></div>
+        <footer class="quote-foot">
+          <p>Prețurile sunt estimative. Valoarea finală depinde de accesul la instalație și de starea ei, și o stabilim împreună la fața locului.</p>
+        </footer>
+      </article>
+    </div>
+  </section>
+
+  <!-- SECTION: PROCESS + STATS -->
+  <section class="section process" id="cum-lucram" aria-labelledby="process-title">
+    <div class="container">
+      <dl class="stats">
+        <div><dt>Lucrăm din</dt><dd data-cfg="company.foundedYear">2014</dd></div>
+        <div><dt>Instalatori autorizați ANRE</dt><dd>12</dd></div>
+        <div><dt>Intervenții finalizate</dt><dd>4.800+</dd></div>
+        <div><dt>Nota pe Google</dt><dd><span data-cfg="rating.value" data-format="rating">5,0</span></dd></div>
+      </dl>
+
+      <div class="section-head section-head-dark">
+        <h2 id="process-title" class="section-title">Cum lucrăm</h2>
+        <p class="section-lead">Trei pași, fără drumuri inutile și fără discuții despre preț după ce lucrarea e gata.</p>
+      </div>
+      <ol class="steps" data-render="steps"></ol>
+    </div>
+  </section>
+
+  <!-- SECTION: REVIEWS (randat din SITE_DATA.reviews) -->
+  <section class="section reviews" id="recenzii" aria-labelledby="reviews-title">
+    <div class="container">
+      <div class="reviews-head">
+        <h2 id="reviews-title" class="section-title">Ce spun clienții pe Google</h2>
+        <a class="g-summary" data-href="googleReviews" target="_blank" rel="noopener">
+          <svg class="g-logo" aria-hidden="true"><use href="#i-google"/></svg>
+          <span class="g-score" data-cfg="rating.value" data-format="rating">5,0</span>
+          <span class="stars" aria-hidden="true">
+            <svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg><svg class="icon"><use href="#i-star"/></svg>
+          </span>
+          <span class="g-count"><span data-cfg="rating.count">214</span> recenzii</span>
+          <span class="visually-hidden">Vezi toate recenziile pe Google (se deschide într-o filă nouă)</span>
+          <svg class="icon g-ext" aria-hidden="true"><use href="#i-external"/></svg>
+        </a>
+      </div>
+      <div class="reviews-grid" data-render="reviews"></div>
+    </div>
+  </section>
+
+  <!-- SECTION: CONTACT + FORM -->
+  <section class="section contact" id="contact" aria-labelledby="contact-title">
+    <div class="container contact-layout">
+      <div class="contact-info">
+        <h2 id="contact-title" class="section-title">Ai o problemă acum? Spune-ne unde ești.</h2>
+        <p class="section-lead">Pentru urgențe sună direct: răspundem non-stop. Pentru montaje și oferte, completează formularul și te sunăm noi în cel mult 15 minute.</p>
+
+        <a class="contact-phone" data-href="tel">
+          <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+          <span data-cfg="contact.phoneDisplay">0722 000 000</span>
+        </a>
+
+        <ul class="contact-list">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg><a data-href="whatsapp" target="_blank" rel="noopener">Scrie-ne pe WhatsApp</a></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><a data-href="email" data-cfg="contact.email">contact@aquafix.ro</a></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><span data-cfg="contact.hours">Non-stop, inclusiv în weekend și sărbători</span></li>
+        </ul>
+
+        <div class="areas">
+          <h3 class="areas-title">Venim în toate cartierele și în localitățile din jur</h3>
+          <ul class="areas-list" data-render="areas"></ul>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <form class="lead-form" id="lead-form" novalidate>
+          <h3 class="form-title">Cere o intervenție</h3>
+
+          <div class="form-error-summary" role="alert" tabindex="-1" hidden></div>
+
+          <fieldset class="field">
+            <legend class="field-label">Ce tip de problemă ai? <span class="req" aria-hidden="true">*</span></legend>
+            <div class="choice-group" data-render="problemTypes"></div>
+            <p class="field-error" id="err-type" hidden></p>
+          </fieldset>
+
+          <div class="field-row">
+            <div class="field">
+              <label class="field-label" for="f-name">Nume <span class="req" aria-hidden="true">*</span></label>
+              <input class="input" id="f-name" name="name" type="text" autocomplete="name" required minlength="2" maxlength="80" aria-describedby="err-name">
+              <p class="field-error" id="err-name" hidden></p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="f-phone">Telefon <span class="req" aria-hidden="true">*</span></label>
+              <input class="input" id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="07xx xxx xxx" pattern="^(\+?40|0)\s?7\d{2}[\s.\-]?\d{3}[\s.\-]?\d{3}$" aria-describedby="err-phone">
+              <p class="field-error" id="err-phone" hidden></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="f-address">Adresă sau cartier <span class="req" aria-hidden="true">*</span></label>
+            <input class="input" id="f-address" name="address" type="text" autocomplete="street-address" required minlength="3" maxlength="140" placeholder="ex. Fabric, str. Ștefan cel Mare" aria-describedby="err-address">
+            <p class="field-error" id="err-address" hidden></p>
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="f-details">Detalii <span class="optional">(opțional)</span></label>
+            <textarea class="input" id="f-details" name="details" rows="3" maxlength="600" placeholder="ex. curge apă sub chiuveta din bucătărie"></textarea>
+          </div>
+
+          <div class="field field-check">
+            <input id="f-consent" name="consent" type="checkbox" required aria-describedby="err-consent">
+            <label for="f-consent">Sunt de acord să fiu contactat în legătură cu această solicitare.</label>
+            <p class="field-error" id="err-consent" hidden></p>
+          </div>
+
+          <!-- honeypot anti-spam pentru backend -->
+          <div class="hp" aria-hidden="true">
+            <label for="f-website">Website</label>
+            <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
+          <button class="btn btn-accent btn-lg btn-block form-submit" type="submit">
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+            <span class="form-submit-label">Trimite solicitarea</span>
+          </button>
+          <p class="form-note">În versiunea demo, solicitarea se deschide în WhatsApp, gata de trimis.</p>
+        </form>
+
+        <div class="form-success" hidden tabindex="-1" aria-live="polite">
+          <span class="success-icon" aria-hidden="true"><svg class="icon"><use href="#i-check"/></svg></span>
+          <h3 class="form-title">Solicitarea e pregătită</h3>
+          <p>Am deschis WhatsApp cu mesajul completat. Apasă „Trimite” acolo și te sunăm în cel mult 15 minute.</p>
+          <dl class="success-summary"></dl>
+          <div class="success-actions">
+            <a class="btn btn-whatsapp success-wa" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>Deschide din nou WhatsApp</a>
+            <button class="btn btn-quiet form-reset" type="button">Trimite altă solicitare</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- SECTION: FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <p class="footer-name"><span data-cfg="company.name">AquaFix Instalații</span></p>
+      <p data-cfg="company.tagline">Intervenții Rapide 24/7</p>
+      <p class="footer-legal"><span data-cfg="company.legalName">AquaFix Instalații SRL</span>, CUI <span data-cfg="company.cui">RO 00000000</span></p>
+    </div>
+    <nav class="footer-nav" aria-label="Linkuri subsol">
+      <a href="#servicii">Servicii</a>
+      <a href="#tarife">Tarife</a>
+      <a href="#cum-lucram">Cum lucrăm</a>
+      <a href="#recenzii">Recenzii</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="footer-contact">
+      <a data-href="tel"><span data-cfg="contact.phoneDisplay">0722 000 000</span></a>
+      <a data-href="email" data-cfg="contact.email">contact@aquafix.ro</a>
+      <span><span data-cfg="company.address">Str. Exemplu nr. 10, Timișoara</span></span>
+      <span class="footer-social">
+        <a data-href="facebook" target="_blank" rel="noopener">Facebook</a>
+        <a data-href="instagram" target="_blank" rel="noopener">Instagram</a>
+      </span>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© <span class="year">2026</span> <span data-cfg="company.legalName">AquaFix Instalații SRL</span>. Site demonstrativ.</p>
+    <a href="#top">Înapoi sus</a>
+  </div>
+</footer>
+
+<!-- SECTION: MOBILE ACTION BAR (< 768px) -->
+<div class="mobile-bar" role="region" aria-label="Contact rapid">
+  <a class="btn btn-accent" data-href="tel"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Sună Urgențe</a>
+  <a class="btn btn-whatsapp" data-href="whatsapp" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp</a>
+</div>
+
+<div class="toast" role="status" aria-live="polite" hidden></div>
+
+</body>
+</html>

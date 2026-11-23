@@ -1,0 +1,123 @@
+/* =========================================================================
+   TOKENS — culori, tipografie, spațiere, raze, mișcare.
+   Paleta de bază:
+     Bleumarin industrial  #0B192C   (ink / fundal închis)
+     Hârtie                #F8FAFC   (fundal deschis)
+     Portocaliu urgență    #F97316   (apeluri, acțiuni principale)
+     Oțel                  #52627A   (text secundar pe deschis)
+     Țeavă (albastru rece) #D5E0EC   (linii, suprafețe secundare)
+   Textul pe portocaliu este bleumarin (contrast ≈ 6.9:1), nu alb.
+   ========================================================================= */
+:root {
+  /* brand */
+  --navy-950: #071120;
+  --navy-900: #0B192C;
+  --navy-800: #11243C;
+  --navy-700: #1A3350;
+  --navy-600: #2A4566;
+  --orange-500: #F97316;
+  --orange-400: #FB8A3C;
+  --orange-600: #EA640C;
+  --wa-green: #25D366;
+  --wa-green-600: #1EBE5A;
+
+  /* temă luminoasă (implicită) */
+  --c-bg: #F8FAFC;
+  --c-bg-alt: #EEF3F8;
+  --c-surface: #FFFFFF;
+  --c-surface-2: #F3F6FA;
+  --c-text: #0B192C;
+  --c-text-2: #3F4F66;
+  --c-text-3: #5A6A80;
+  --c-line: #D5E0EC;
+  --c-line-strong: #B9C8D9;
+  --c-accent: var(--orange-500);
+  --c-accent-hover: var(--orange-400);
+  --c-on-accent: #0B192C;
+  --c-accent-text: #C2410C;   /* portocaliu pentru text pe fundal deschis (AA) */
+  --c-dark: var(--navy-900);
+  --c-on-dark: #F1F5FA;
+  --c-on-dark-2: #AEBCCE;
+  --c-focus: #F97316;
+  --c-success: #15803D;
+  --c-error: #B91C1C;
+  --c-error-bg: #FEF2F2;
+  --c-paper: #FFFFFF;
+  --c-paper-line: #CBD6E3;
+  --shadow-1: 0 1px 2px rgba(11, 25, 44, .06), 0 4px 14px rgba(11, 25, 44, .06);
+  --shadow-2: 0 2px 4px rgba(11, 25, 44, .06), 0 18px 40px -12px rgba(11, 25, 44, .22);
+
+  /* tipografie */
+  --font-display: "Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --fs-xs: .8125rem;   /* 13 */
+  --fs-sm: .9375rem;   /* 15 */
+  --fs-base: 1rem;     /* 16 */
+  --fs-md: 1.125rem;   /* 18 */
+  --fs-lg: 1.375rem;   /* 22 */
+  --fs-xl: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+  --fs-2xl: clamp(2rem, 1.5rem + 2.2vw, 3.25rem);
+  --fs-hero: clamp(2.5rem, 1.4rem + 4.6vw, 5.4rem);
+
+  /* spațiere 4/8 */
+  --sp-1: .25rem; --sp-2: .5rem; --sp-3: .75rem; --sp-4: 1rem;
+  --sp-5: 1.5rem; --sp-6: 2rem; --sp-7: 3rem; --sp-8: 4rem; --sp-9: 6rem;
+  --section-y: clamp(4rem, 3rem + 4vw, 7rem);
+  --gutter: clamp(1rem, .6rem + 2vw, 2rem);
+  --container: 1240px;
+
+  /* raze: ierarhie, nu o singură valoare */
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 22px;
+  --r-xl: 32px;
+  --r-pill: 999px;
+
+  /* mișcare */
+  --ease-out: cubic-bezier(.2, .8, .2, 1);
+  --ease-in: cubic-bezier(.4, 0, 1, 1);
+  --dur-1: 150ms;
+  --dur-2: 240ms;
+  --dur-3: 600ms;
+
+  /* straturi */
+  --z-header: 40;
+  --z-drawer: 50;
+  --z-bar: 45;
+  --z-toast: 100;
+
+  --header-h: 72px;
+  --bar-h: 0px;
+
+  color-scheme: light;
+}
+
+/* temă întunecată */
+:root[data-theme="dark"] {
+  --c-bg: #0B192C;
+  --c-bg-alt: #0E1F36;
+  --c-surface: #11243C;
+  --c-surface-2: #16304E;
+  --c-text: #EEF3F9;
+  --c-text-2: #C3CFDD;
+  --c-text-3: #9AABC0;
+  --c-line: #22395A;
+  --c-line-strong: #2F4B70;
+  --c-accent-text: #FB923C;
+  --c-dark: #071120;
+  --c-on-dark: #F1F5FA;
+  --c-on-dark-2: #A9B8CB;
+  --c-success: #4ADE80;
+  --c-error: #FCA5A5;
+  --c-error-bg: rgba(185, 28, 28, .16);
+  --c-paper: #10223A;
+  --c-paper-line: #2A4466;
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, .3);
+  --shadow-2: 0 18px 40px -12px rgba(0, 0, 0, .55);
+  color-scheme: dark;
+}
+
+@media (max-width: 767.98px) {
+  :root { --header-h: 64px; --bar-h: 72px; }
+}
